@@ -29,7 +29,7 @@
     </script>
    <nav class="navbar navbar-default navbar-fixed-top custom-navbar">
         <div class="container-fluid">
-            <a class="navbar-brand" href="trangChu.php">
+            <a class="navbar-brand" href="../home.php">
             <img src="../images/logo.png" alt="Logo"></a>
         </div>
     </nav>

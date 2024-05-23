@@ -19,40 +19,24 @@
 ?>
 
 <!-- Main -->
-<div class="container-2">   
-    <div class="title-main"><?php echo $row_title['ten_danhmuc'] ?></div>  
-        <div id="section" class="container-fluid">
-            <ul class="product">
-            <?php
-                while($row_monan = mysqli_fetch_array($query_monan)){
-            ?>
-            <li>
-                <a href="#" data-toggle="modal" data-target="#myModal-garan1">
-                <img src="../admincp/product/images/<?php echo $row_monan['imgURL'] ?>"> 
-                <p class="title_monan"><?php echo $row_monan['tenmonan'] ?></p>
-                <br>
-                <p class="price_monan"><?php echo number_format($row_monan['gia'],0,',','.') ?> <u>đ</u></p>
-                </a>
-            </li> 
-            <?php
-            }
-            ?>
-            </ul> 
-        </div> 
-    </div> 
+<div class="container-2">  
+  <div id="section" class="container-fluid">
+    <ul class="product">
+      <?php
+        while($row_monan = mysqli_fetch_array($query_monan)){
+      ?>
+      <li>
+        <a href="order.php?quanly=monan&id=<?php echo $row_monan['idmonan'] ?>">
+        <img src="../admincp/product/images/<?php echo $row_monan['imgURL'] ?>"> 
+        <p class="title_monan"><?php echo $row_monan['tenmonan'] ?></p>
+        <br>
+        <p class="price_monan"><?php echo number_format($row_monan['gia'],0,',','.') ?> <u>đ</u></p>
+        </a>
+      </li> 
+      <?php
+      }
+      ?>
+    </ul> 
+  </div> 
 </div><br><br>
 
-<div id="myModal-garan1" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Nội dung modal-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">  </h4>
-      </div>
-
-      <div class="modal-body">
-
-      </div>
-    </div>
-  </div>
-</div>

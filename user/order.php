@@ -14,6 +14,7 @@
       include("../admincp/connectDatabase.php");
       include("order/menu.php");
       include("order/main.php");
+      include("order/product.php");
       include("../pages/footer.php");
     ?>
 </body>

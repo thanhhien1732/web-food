@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 26, 2023 lúc 08:30 PM
--- Phiên bản máy phục vụ: 10.4.28-MariaDB
--- Phiên bản PHP: 8.2.4
+-- Máy chủ: 127.0.0.1:3307
+-- Thời gian đã tạo: Th5 23, 2024 lúc 04:07 PM
+-- Phiên bản máy phục vụ: 10.4.32-MariaDB
+-- Phiên bản PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `dbfastfood`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `admin`
+--
+
+CREATE TABLE `admin` (
+  `id_admin` int(11) NOT NULL,
+  `admin_name` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `phonenumber` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `admin`
+--
+
+INSERT INTO `admin` (`id_admin`, `admin_name`, `email`, `phonenumber`, `password`) VALUES
+(8, 'admin123', 'admin134@gmail.com', '09090543221', 'begone1234'),
+(9, 'admin123', 'admin222@gmail.com', '09090543221', 'begone1332154'),
+(10, 'hien1732', 'thanhhien@gmail.com', '0335434504', 'hien1732');
 
 -- --------------------------------------------------------
 
@@ -40,8 +63,7 @@ INSERT INTO `danhmuc` (`id_danhmuc`, `ten_danhmuc`) VALUES
 (11, 'Gà rán'),
 (12, 'Burger'),
 (13, 'Pizza'),
-(15, 'Mì Ý'),
-(16, 'Đồ uống');
+(15, 'Mì Ý');
 
 -- --------------------------------------------------------
 
@@ -68,11 +90,27 @@ INSERT INTO `monan` (`idmonan`, `tenmonan`, `gia`, `mota`, `imgURL`, `id_danhmuc
 (32, 'Combo Gà Rán', 200000, 'Combo Gà Rán', 'comboGaran.png', 11),
 (33, 'Cánh Gà Rán', 32000, 'Cánh Gà Rán', 'canhGa.png', 11),
 (34, 'Burger Gà', 54000, 'Burger Gà', 'burgerG.png', 12),
-(35, 'Burger Tôm', 45000, 'Burger Tôm', 'burgerT.png', 12);
+(35, 'Burger Tôm', 45000, 'Burger Tôm', 'burgerT.png', 12),
+(40, 'Pizza Rau Củ', 45000, 'Pizza Rau Củ', 'pizza2.png', 13),
+(41, 'Pizza Phô Mai', 49999, 'Pizza Phô Mai', 'pizzaPM.png', 13),
+(42, 'Mỳ ý sốt bò', 55000, 'Mỳ ý sốt bò', 'mì ý1.png', 15),
+(43, 'Pizza Thập Cẩm', 54998, 'Pizza Thập Cẩm', 'pizzaTC.png', 13),
+(46, 'Burger Cá', 53000, 'Burger Cá', 'burgerC.png', 12),
+(47, 'Burger Bò', 50000, 'Burger Bò', 'burgerB.png', 12),
+(48, 'Pizza Pepperoni', 60000, 'Pizza Pepperoni', 'pizzaP.png', 13),
+(49, 'Mì ý sốt cà chua', 50000, 'Mì ý sốt cà chua', 'mì ý 2.png', 15),
+(50, 'Mì ý đặc biệt', 60000, 'Mì ý đặc biệt', 'mỳ ý ĐB.png', 15),
+(51, 'Mì ý thập cẩm', 65000, 'Mì Ý Thập Cẩm', 'mỳ ý TC.png', 15);
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
+
+--
+-- Chỉ mục cho bảng `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Chỉ mục cho bảng `danhmuc`
@@ -91,16 +129,22 @@ ALTER TABLE `monan`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT cho bảng `danhmuc`
 --
 ALTER TABLE `danhmuc`
-  MODIFY `id_danhmuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_danhmuc` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT cho bảng `monan`
 --
 ALTER TABLE `monan`
-  MODIFY `idmonan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `idmonan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

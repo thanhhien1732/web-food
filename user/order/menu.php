@@ -9,7 +9,7 @@
     <a class="navbar-brand" href="../home.php">
       <img src="../images/logo.png" alt="Logo"></a>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#" data-toggle="modal" data-target="#myModal-user"><span class="glyphicon glyphicon-user"></span></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
       <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
     </ul>
   </div>
@@ -28,7 +28,8 @@
         <?php
           while($row_danhmuc = mysqli_fetch_array($query_danhmuc)) {
         ?>
-          <li><a href="order.php?quanly=danhmuc&id=<?php echo $row_danhmuc['id_danhmuc'] ?>"> <?php echo $row_danhmuc['ten_danhmuc'] ?></a></li>
+          <li><a href="order.php?quanly=danhmuc&id=<?php echo $row_danhmuc['id_danhmuc'] ?>"> 
+          <?php echo $row_danhmuc['ten_danhmuc'] ?></a></li>
         <?php
         }
         ?>
@@ -38,20 +39,4 @@
   </nav> 
 </nav> 
 
-
-<div id="myModal-user" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Nội dung modal-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Đăng nhập tài khoản</h4>
-      </div>
-
-      <div class="modal-body">
-        <!-- Đặt mã sidebar.php của bạn vào đây -->
-        <!-- Đoạn code của sidebar.php tại đây -->
-      </div>
-    </div>
-  </div>
-</div>
 

@@ -14,6 +14,7 @@
       include("pages/menu.php");
       include("pages/main.php");
       include("pages/footer.php");
+      
     ?>
 </body>
 </html>

@@ -95,7 +95,7 @@ ul.product li {
     width: 20%; 
     padding: 15px;
     margin: 28.65px;  
-    color: black;                             /*Tạo khung món ăn*/
+    color: black;                                 /*Tạo khung món ăn*/
     border: 1px solid #ccc!important;
     border-radius: 16px;
     overflow: hidden;
@@ -126,12 +126,83 @@ ul.product li p {
     font-weight: bold;
 }
 
+/* Product */
+.wrapper_product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chitiet_product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    border-radius: 10px;
+    margin-top: -650px;
+    overflow: hidden;
+}
+
+.chitiet_product img{
+    float: left;
+    object-fit: fill;
+    width: 50%;
+    max-height: 100%;
+}
+
+.noidung_product{
+    float: left;
+    padding-left: 60px;
+}
+
+.chitiet_product h1{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mota_product{
+    font-size: 18px;
+    color: #78838c;
+    margin-bottom: 20px;
+}
+
+.gia_product{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+input.themgiohang {
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+    background-color: #e4002b;
+    border: 1px solid #e4002b;
+    border-radius: 25px;
+    line-height: 20px;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    padding: 1.07142857rem 1.42857143rem;
+}
+  
+input.themgiohang:hover {
+    background-color: #ad0020;
+}
 
 /* Footer */
 .custom-footer {
     background: #202124;
     color: #ababab;
-    padding: 32px 0; /* Tùy chỉnh padding cho khoảng cách lề của footer */
+    padding: 35px 0; /* Tùy chỉnh padding cho khoảng cách lề của footer */
 }
   
 .custom-footer p {
